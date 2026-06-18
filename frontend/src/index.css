@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Poppins", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #07142f;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================
+   DARK THEME BASE
+========================= */
+
+body.dark-theme {
+  background: #071426;
+  color: #ffffff;
+}
+
+/* PAGE BACKGROUNDS */
+
+body.dark-theme .home-page,
+body.dark-theme .service-page,
+body.dark-theme .product-page,
+body.dark-theme .worker-detail-page,
+body.dark-theme .product-detail-page,
+body.dark-theme .worker-register-page,
+body.dark-theme .product-register-page,
+body.dark-theme .help-page,
+body.dark-theme .settings-page {
+  background: #071426 !important;
+}
+
+/* NAVBAR */
+
+body.dark-theme .navbar {
+  background: rgba(15, 31, 53, 0.96) !important;
+  border-bottom: 1px solid #223a5c !important;
+}
+
+body.dark-theme .nav-links a,
+body.dark-theme .nav-action-btn {
+  color: #ffffff !important;
+}
+
+body.dark-theme .nav-search input {
+  background: #12284a !important;
+  color: #ffffff !important;
+  border-color: #25466f !important;
+}
+
+body.dark-theme .nav-search input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* SEARCH DROPDOWN */
+
+body.dark-theme .search-suggestions,
+body.dark-theme .nav-action-menu {
+  background: #0f1f35 !important;
+  border: 1px solid #223a5c !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-theme .suggestion-section h5,
+body.dark-theme .suggestion-item h4,
+body.dark-theme .suggestion-item p,
+body.dark-theme .suggestion-empty,
+body.dark-theme .nav-action-menu a {
+  color: #ffffff !important;
+}
+
+body.dark-theme .suggestion-item:hover,
+body.dark-theme .nav-action-menu a:hover {
+  background: #12284a !important;
+}
+
+/* HERO DARK */
+
+body.dark-theme .home-hero {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(21, 158, 212, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 85%, rgba(17, 163, 90, 0.18), transparent 34%),
+    linear-gradient(135deg, #071426, #0d2b2f) !important;
+}
+
+body.dark-theme .home-left h1,
+body.dark-theme .home-left p,
+body.dark-theme .service-hero h1,
+body.dark-theme .service-hero p,
+body.dark-theme .product-hero h1,
+body.dark-theme .product-hero p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* HOME DARK CARDS */
+
+body.dark-theme .home-points div,
+body.dark-theme .quality-left,
+body.dark-theme .quality-grid div,
+body.dark-theme .service-visual-card,
+body.dark-theme .floating-card {
+  background: #0f1f35 !important;
+  color: #ffffff !important;
+  border-color: #223a5c !important;
+}
+
+body.dark-theme .home-points strong,
+body.dark-theme .home-points span,
+body.dark-theme .quality-left h2,
+body.dark-theme .quality-left p,
+body.dark-theme .quality-grid div,
+body.dark-theme .service-visual-card h3,
+body.dark-theme .service-visual-card p,
+body.dark-theme .floating-card h4,
+body.dark-theme .floating-card p {
+  color: #ffffff !important;
+}
+
+/* CATEGORY / SETTINGS / HELP DARK CARDS */
+
+body.dark-theme .service-card,
+body.dark-theme .product-category-card,
+body.dark-theme .settings-card,
+body.dark-theme .settings-profile-card,
+body.dark-theme .help-card,
+body.dark-theme .faq-item {
+  background: #0f1f35 !important;
+  color: #ffffff !important;
+  border-color: #223a5c !important;
+}
+
+body.dark-theme .service-card h3,
+body.dark-theme .service-card p,
+body.dark-theme .product-category-card h3,
+body.dark-theme .product-category-card p,
+body.dark-theme .settings-card h3,
+body.dark-theme .settings-card h2,
+body.dark-theme .settings-card p,
+body.dark-theme .settings-profile-card h2,
+body.dark-theme .settings-profile-card p,
+body.dark-theme .help-card h3,
+body.dark-theme .help-card p,
+body.dark-theme .faq-item h4,
+body.dark-theme .faq-item p {
+  color: #ffffff !important;
+}
+
+/* =========================
+   WHITE CONTENT CARDS
+   Keep these readable in dark mode
+========================= */
+
+body.dark-theme .worker-card,
+body.dark-theme .product-card,
+body.dark-theme .gallery-card,
+body.dark-theme .profile-card,
+body.dark-theme .reviews-card,
+body.dark-theme .product-gallery-card,
+body.dark-theme .product-profile-card {
+  background: #ffffff !important;
+  color: #07142f !important;
+}
+
+/* Worker card text */
+body.dark-theme .worker-title-row h3,
+body.dark-theme .worker-title-row p,
+body.dark-theme .worker-desc,
+body.dark-theme .worker-info-grid span,
+body.dark-theme .worker-info-grid strong {
+  color: #07142f !important;
+  opacity: 1 !important;
+}
+
+/* Product card text */
+body.dark-theme .product-body h3,
+body.dark-theme .product-desc,
+body.dark-theme .product-info-grid span,
+body.dark-theme .product-info-grid strong {
+  color: #07142f !important;
+  opacity: 1 !important;
+}
+
+/* Worker detail text */
+body.dark-theme .gallery-card h2,
+body.dark-theme .profile-card h2,
+body.dark-theme .reviews-card h2,
+body.dark-theme .profile-desc,
+body.dark-theme .detail-info-grid small,
+body.dark-theme .detail-info-grid strong,
+body.dark-theme .review-top strong,
+body.dark-theme .review-top span,
+body.dark-theme .review-item p,
+body.dark-theme .empty-review {
+  color: #07142f !important;
+  opacity: 1 !important;
+}
+
+/* Product detail text */
+body.dark-theme .product-gallery-card h2,
+body.dark-theme .product-profile-card h2,
+body.dark-theme .product-profile-top h2,
+body.dark-theme .product-profile-top span,
+body.dark-theme .product-full-desc,
+body.dark-theme .product-detail-info-grid small,
+body.dark-theme .product-detail-info-grid strong {
+  color: #07142f !important;
+  opacity: 1 !important;
+}
+
+/* Info boxes inside cards */
+
+body.dark-theme .worker-info-grid div,
+body.dark-theme .product-info-grid div,
+body.dark-theme .detail-info-grid div,
+body.dark-theme .product-detail-info-grid div,
+body.dark-theme .review-item {
+  background: #f8fafc !important;
+  color: #07142f !important;
+}
+
+/* FORMS */
+
+body.dark-theme .worker-form-card,
+body.dark-theme .product-form-card,
+body.dark-theme .register-form,
+body.dark-theme .form-card,
+body.dark-theme .worker-register-form,
+body.dark-theme .product-register-form,
+body.dark-theme .product-form {
+  background: #ffffff !important;
+  color: #07142f !important;
+}
+
+body.dark-theme .worker-form-card h1,
+body.dark-theme .worker-form-card h2,
+body.dark-theme .worker-form-card h3,
+body.dark-theme .product-form-card h1,
+body.dark-theme .product-form-card h2,
+body.dark-theme .product-form-card h3,
+body.dark-theme .register-form h1,
+body.dark-theme .register-form h2,
+body.dark-theme .register-form h3,
+body.dark-theme .form-card h1,
+body.dark-theme .form-card h2,
+body.dark-theme .form-card h3,
+body.dark-theme .worker-register-form h1,
+body.dark-theme .worker-register-form h2,
+body.dark-theme .worker-register-form h3,
+body.dark-theme .product-register-form h1,
+body.dark-theme .product-register-form h2,
+body.dark-theme .product-register-form h3,
+body.dark-theme .product-form h1,
+body.dark-theme .product-form h2,
+body.dark-theme .product-form h3 {
+  color: #07142f !important;
+}
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+  background: #f8fafc !important;
+  color: #07142f !important;
+  border-color: #dbe2ea !important;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* BUTTONS / BADGES */
+
+body.dark-theme .call-btn,
+body.dark-theme .whatsapp-btn,
+body.dark-theme .detail-call,
+body.dark-theme .detail-whatsapp,
+body.dark-theme .product-detail-call,
+body.dark-theme .product-detail-whatsapp,
+body.dark-theme .submit-review-btn,
+body.dark-theme button[type="submit"] {
+  color: #ffffff !important;
+}
+
+body.dark-theme .profile-btn,
+body.dark-theme .product-view {
+  background: #eef6ff !important;
+  color: #0f88c7 !important;
+}
+
+body.dark-theme .rating-box,
+body.dark-theme .profile-header span {
+  background: #fff7ed !important;
+  color: #c2410c !important;
+}
+
+body.dark-theme .verified-badge,
+body.dark-theme .account-badge,
+body.dark-theme .detail-badge,
+body.dark-theme .product-detail-badge {
+  background: #dcfce7 !important;
+  color: #15803d !important;
+}
+
+/* SERVICE GRID GLOBAL SAFETY */
+
+.service-page .worker-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+}
+@media (max-width: 1200px) {
+  .service-page .worker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .service-page .worker-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==============================
+   SERVICE PAGE EMERGENCY FIX
+   paste at VERY BOTTOM of index.css
+============================== */
+
+.service-page .worker-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.service-page .worker-card {
+  background: #ffffff !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.service-page .worker-image-box {
+  height: 210px !important;
+  background: linear-gradient(135deg, #18aee4, #12a84f) !important;
+}
+
+.service-page .worker-body {
+  background: #ffffff !important;
+  padding: 24px !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  color: #07142f !important;
+}
+
+.service-page .worker-title-row h3,
+.service-page .worker-title-row p,
+.service-page .worker-desc,
+.service-page .worker-info-grid span,
+.service-page .worker-info-grid strong {
+  color: #07142f !important;
+  opacity: 1 !important;
+}
+
+.service-page .worker-desc {
+  display: block !important;
+  background: transparent !important;
+  width: 100% !important;
+  line-height: 1.6 !important;
+  font-size: 14px !important;
+}
+
+.service-page .worker-info-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+.service-page .worker-info-grid div {
+  background: #f8fafc !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  width: 100% !important;
+  min-height: 76px !important;
+}
+
+.service-page .worker-actions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+}
+
+.service-page .profile-btn {
+  background: #eef6ff !important;
+  color: #0f88c7 !important;
+  border-radius: 999px !important;
+  padding: 14px !important;
+  text-align: center !important;
+  font-weight: 900 !important;
+}
+
+body.dark-theme .service-page .worker-card,
+body.dark-theme .service-page .worker-body {
+  background: #0f1f35 !important;
+}
+
+body.dark-theme .service-page .worker-title-row h3,
+body.dark-theme .service-page .worker-title-row p,
+body.dark-theme .service-page .worker-desc,
+body.dark-theme .service-page .worker-info-grid strong {
+  color: #ffffff !important;
+}
+
+body.dark-theme .service-page .worker-info-grid span {
+  color: #cbd5e1 !important;
+}
+
+body.dark-theme .service-page .worker-info-grid div {
+  background: #12284a !important;
+}
+
+@media (max-width: 1200px) {
+  .service-page .worker-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .service-page .worker-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* FORCE DETAIL PAGE DARK THEME FIX */
+
+body.dark-theme .worker-detail-page .gallery-card,
+body.dark-theme .worker-detail-page .profile-card,
+body.dark-theme .worker-detail-page .reviews-card,
+body.dark-theme .product-detail-page .product-gallery-card,
+body.dark-theme .product-detail-page .product-profile-card {
+  background: #0f1f35 !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .worker-detail-page .gallery-card h2,
+body.dark-theme .worker-detail-page .profile-card h2,
+body.dark-theme .worker-detail-page .reviews-card h2,
+body.dark-theme .worker-detail-page .profile-desc,
+body.dark-theme .worker-detail-page .detail-info-grid strong,
+body.dark-theme .worker-detail-page .review-item p,
+body.dark-theme .product-detail-page .product-gallery-card h2,
+body.dark-theme .product-detail-page .product-profile-card h2,
+body.dark-theme .product-detail-page .product-full-desc,
+body.dark-theme .product-detail-page .product-detail-info-grid strong {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.dark-theme .worker-detail-page .detail-info-grid small,
+body.dark-theme .product-detail-page .product-detail-info-grid small {
+  color: #cbd5e1 !important;
+}
+
+body.dark-theme .worker-detail-page .detail-info-grid div,
+body.dark-theme .worker-detail-page .review-item,
+body.dark-theme .product-detail-page .product-detail-info-grid div {
+  background: #12284a !important;
+}
+
+/* PRODUCT PAGE FINAL FORCE FIX */
+
+html body.dark-theme .product-page .product-grid .product-card {
+  background: #0f1f35 !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-body {
+  background: #0f1f35 !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-body h3,
+html body.dark-theme .product-page .product-grid .product-card .product-body p,
+html body.dark-theme .product-page .product-grid .product-card .product-desc {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-info-grid div {
+  background: #12284a !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-info-grid span {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-info-grid strong {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+html body.dark-theme .product-page .product-grid .product-card .product-view {
+  background: #17365f !important;
+  color: #7dd3fc !important;
+  opacity: 1 !important;
+}
+
+/* PRODUCT REGISTER FINAL FORCE DARK FIX */
+
+html body.dark-theme .product-register-page .product-form {
+  background: #0f1f35 !important;
+  color: #ffffff !important;
+  border: 1px solid #223a5c !important;
+}
+
+html body.dark-theme .product-register-page .product-form h2 {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+html body.dark-theme .product-register-page .image-upload-box,
+html body.dark-theme .product-register-page .location-box {
+  background: #12284a !important;
+  border-color: #25466f !important;
+  color: #ffffff !important;
+}
+
+html body.dark-theme .product-register-page .product-form input,
+html body.dark-theme .product-register-page .product-form select,
+html body.dark-theme .product-register-page .product-form textarea {
+  background: #12284a !important;
+  color: #ffffff !important;
+  border-color: #25466f !important;
+}
+
+html body.dark-theme .product-register-page .product-form input::placeholder,
+html body.dark-theme .product-register-page .product-form textarea::placeholder {
+  color: #cbd5e1 !important;
+}
+
+body {
+  padding-top: 92px;
+}

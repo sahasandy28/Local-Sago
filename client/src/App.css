@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+.app {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.card p {
+  color: #444;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+.location {
+  color: #555;
+}
+
+.call-btn {
+  display: block;
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.call-btn:hover {
+  background: darkgreen;
+}

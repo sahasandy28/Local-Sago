@@ -1,0 +1,118 @@
+.company-detail-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.company-detail-hero {
+  padding: 85px 6%;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #18aee4, #12a84f);
+}
+
+.company-detail-hero span {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.company-detail-hero h1 {
+  font-size: 52px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.company-detail-hero p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.company-detail-content {
+  padding: 65px 6%;
+}
+
+.company-detail-card {
+  max-width: 980px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 42px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.back-company {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #0f88c7;
+  font-weight: 900;
+}
+
+.company-detail-card h2 {
+  color: #07142f;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.main-content {
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 650;
+  margin-bottom: 30px;
+}
+
+.detail-point-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.detail-point {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 18px;
+  color: #07142f;
+  font-weight: 900;
+}
+
+/* DARK */
+body.dark-theme .company-detail-page {
+  background: #071426;
+}
+
+body.dark-theme .company-detail-card {
+  background: #0f1f35;
+  border: 1px solid #223a5c;
+}
+
+body.dark-theme .company-detail-card h2,
+body.dark-theme .detail-point {
+  color: #ffffff;
+}
+
+body.dark-theme .main-content {
+  color: #cbd5e1;
+}
+
+body.dark-theme .detail-point {
+  background: #12284a;
+}
+
+body.dark-theme .back-company {
+  color: #7dd3fc;
+}
+
+@media (max-width: 700px) {
+  .company-detail-hero h1 {
+    font-size: 36px;
+  }
+
+  .company-detail-card {
+    padding: 28px;
+  }
+
+  .detail-point-grid {
+    grid-template-columns: 1fr;
+  }
+}

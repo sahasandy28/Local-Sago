@@ -1,0 +1,148 @@
+.search-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.search-hero {
+  padding: 75px 6%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #18aee4, #12a84f);
+}
+
+.search-hero span {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.search-hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.search-hero p {
+  font-size: 18px;
+}
+
+.search-content {
+  padding: 60px 6%;
+}
+
+.search-section-title {
+  margin: 35px 0 22px;
+}
+
+.search-section-title h2 {
+  color: #07142f;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.search-card {
+  background: white;
+  border-radius: 24px;
+  padding: 26px;
+  cursor: pointer;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+  transition: 0.25s;
+}
+
+.search-card:hover {
+  transform: translateY(-6px);
+}
+
+.search-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.worker-avatar {
+  background: linear-gradient(135deg, #18aee4, #12a84f);
+}
+
+.product-avatar {
+  background: linear-gradient(135deg, #f97316, #facc15);
+}
+
+.search-card h3 {
+  color: #07142f;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.search-card p {
+  color: #64748b;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.search-card strong {
+  color: #07142f;
+}
+
+.search-status {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  text-align: center;
+  color: #64748b;
+  font-weight: 900;
+}
+
+/* DARK */
+body.dark-theme .search-page {
+  background: #071426;
+}
+
+body.dark-theme .search-section-title h2 {
+  color: white;
+}
+
+body.dark-theme .search-card,
+body.dark-theme .search-status {
+  background: #0f1f35;
+}
+
+body.dark-theme .search-card h3,
+body.dark-theme .search-card strong {
+  color: white;
+}
+
+body.dark-theme .search-card p {
+  color: #cbd5e1;
+}
+
+@media (max-width: 1000px) {
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-hero h1 {
+    font-size: 34px;
+  }
+}
