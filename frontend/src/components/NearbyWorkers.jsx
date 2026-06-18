@@ -18,11 +18,11 @@ function NearbyWorkers() {
       .get(`${API_BASE_URL}/workers/?lat=${lat}&lon=${lon}`)
       .then((res) => {
         setWorkers((res.data || []).slice(0, 6));
-        setMessage("Nearby workers found ✅");
+        setMessage("Nearby workers found ");
       })
       .catch((error) => {
         console.log("Nearby workers error:", error);
-        setMessage("Unable to load nearby workers ❌");
+        setMessage("Unable to load nearby workers ");
       })
       .finally(() => {
         setLoading(false);
@@ -31,7 +31,7 @@ function NearbyWorkers() {
 
   const detectLocation = () => {
     if (!navigator.geolocation) {
-      setMessage("Location not supported in this browser ❌");
+      setMessage("Location not supported in this browser ");
       return;
     }
 
@@ -47,7 +47,7 @@ function NearbyWorkers() {
       },
       () => {
         setLoading(false);
-        setMessage("Please allow location permission ❌");
+        setMessage("Please allow location permission ");
       }
     );
   };
@@ -56,7 +56,7 @@ function NearbyWorkers() {
     <section className="nearby-workers-section">
       <div className="nearby-header">
         <div>
-          <span>📍 Location Based</span>
+          <span> Location Based</span>
           <h2>Workers Near You</h2>
           <p>Find verified workers sorted by nearest distance.</p>
         </div>
@@ -87,7 +87,7 @@ function NearbyWorkers() {
                 <div className="nearby-worker-meta">
                   <span>⭐ {Number(worker.average_rating || 0).toFixed(1)}</span>
                   <span>
-                    📏{" "}
+                    {" "}
                     {worker.distance_km !== null &&
                     worker.distance_km !== undefined
                       ? `${worker.distance_km} km`
