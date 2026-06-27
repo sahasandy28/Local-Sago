@@ -4,6 +4,9 @@ from django.dispatch import receiver
 from .models import WorkerProfile, Product, Notification
 
 
+# =========================
+# WORKER VERIFIED NOTIFICATION
+# =========================
 @receiver(post_save, sender=WorkerProfile)
 def worker_verified_notification(sender, instance, created, **kwargs):
     if created:
@@ -13,7 +16,6 @@ def worker_verified_notification(sender, instance, created, **kwargs):
         exists = Notification.objects.filter(
             phone=instance.phone,
             title="Worker Profile Verified",
-            message__icontains=instance.name,
         ).exists()
 
         if not exists:
@@ -24,6 +26,9 @@ def worker_verified_notification(sender, instance, created, **kwargs):
             )
 
 
+# =========================
+# PRODUCT VERIFIED NOTIFICATION
+# =========================
 @receiver(post_save, sender=Product)
 def product_verified_notification(sender, instance, created, **kwargs):
     if created:
@@ -33,7 +38,6 @@ def product_verified_notification(sender, instance, created, **kwargs):
         exists = Notification.objects.filter(
             phone=instance.seller_phone,
             title="Product Approved",
-            message__icontains=instance.title,
         ).exists()
 
         if not exists:

@@ -1,7 +1,4 @@
 from django.contrib import admin
-
- 
-
 from .models import (
     ServiceCategory,
     WorkerProfile,
@@ -13,14 +10,20 @@ from .models import (
     Notification,
     FavoriteWorker,
     FavoriteProduct,
+    WorkerReport,
+    ProductReport,
 )
 
-from .models import WorkerReport, ProductReport
-
+# =========================
+# REPORTS
+# =========================
 admin.site.register(WorkerReport)
 admin.site.register(ProductReport)
 
 
+# =========================
+# INLINE IMAGES
+# =========================
 class WorkerImageInline(admin.TabularInline):
     model = WorkerImage
     extra = 1
@@ -31,6 +34,9 @@ class ProductImageInline(admin.TabularInline):
     extra = 1
 
 
+# =========================
+# SERVICE CATEGORY
+# =========================
 @admin.register(ServiceCategory)
 class ServiceCategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug", "is_active", "created_at")
@@ -39,6 +45,9 @@ class ServiceCategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
 
 
+# =========================
+# WORKERS
+# =========================
 @admin.register(WorkerProfile)
 class WorkerProfileAdmin(admin.ModelAdmin):
     list_display = (
@@ -83,17 +92,14 @@ class WorkerImageAdmin(admin.ModelAdmin):
 
 @admin.register(WorkerReview)
 class WorkerReviewAdmin(admin.ModelAdmin):
-    list_display = (
-        "worker",
-        "reviewer_name",
-        "rating",
-        "created_at",
-    )
-
+    list_display = ("worker", "reviewer_name", "rating", "created_at")
     list_filter = ("rating",)
     search_fields = ("worker__name", "reviewer_name", "comment")
 
 
+# =========================
+# PRODUCTS
+# =========================
 @admin.register(ProductCategory)
 class ProductCategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug", "is_active", "created_at")
@@ -150,6 +156,10 @@ class ProductImageAdmin(admin.ModelAdmin):
     list_display = ("product", "caption", "uploaded_at")
     search_fields = ("product__title", "caption")
 
-admin.site.register(Notification) 
+
+# =========================
+# MISC
+# =========================
+admin.site.register(Notification)
 admin.site.register(FavoriteWorker)
 admin.site.register(FavoriteProduct)

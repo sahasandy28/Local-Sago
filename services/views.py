@@ -583,3 +583,7 @@ def report_product(request):
         serializer.errors,
         status=400
     )
+    
+@api_view(["GET"])
+def test_api(request):
+    return Response({"message": "Services working"})    
