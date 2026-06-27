@@ -223,20 +223,80 @@
 }
 
 .rating-box {
-  background: #fff7ed;
-  color: #c2410c;
-  min-width: 78px;
-  padding: 9px 10px;
-  border-radius: 16px;
-  text-align: center;
+  min-width: 120px;
+  min-height: 88px;
+
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+
+  border: 1px solid #fdba74;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 14px 12px;
+
+  box-shadow: 0 8px 20px rgba(194, 65, 12, 0.12);
+
+  transition: 0.3s ease;
+}
+
+/*  ratting button */
+
+
+.rating-box:hover {
+  transform: translateY(-3px);
+}
+
+.rating-box strong {
+  display: block;
+  font-size: 26px;
   font-weight: 900;
+  color: #c2410c;
+  line-height: 1;
+}
+
+.rating-box span {
+  display: block;
+  font-size: 18px;
+  color: #f59e0b;
+  letter-spacing: 2px;
+  line-height: 1;
 }
 
 .rating-box small {
   display: block;
-  font-size: 10px;
-  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #92400e;
+  line-height: 1;
 }
+
+
+/*  rating dark theme */
+
+body.dark-theme .rating-box {
+  background: #2b1b0d;
+  border: 1px solid #92400e;
+}
+
+body.dark-theme .rating-box strong {
+  color: #fb923c;
+}
+
+body.dark-theme .rating-box span {
+  color: #facc15;
+}
+
+body.dark-theme .rating-box small {
+  color: #fed7aa;
+}
+
+
 
 .worker-desc {
   color: #334155;

@@ -344,7 +344,10 @@ if (loading) {
                           {Number(worker.average_rating || 0).toFixed(1)}
                         </strong>
                         <span>{renderStars(worker.average_rating)}</span>
-                        <small>{worker.total_reviews || 0} reviews</small>
+                        <small>
+                          {worker.total_reviews || 0} Review
+                          {(worker.total_reviews || 0) !== 1 ? "s" : ""}
+                        </small>
                       </div>
                     </div>
 
