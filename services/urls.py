@@ -10,6 +10,10 @@ urlpatterns = [
     path("services/", views.service_list, name="service-list"),
 
     path("workers/", views.worker_list, name="worker-list"),
+    
+    path("api/token/", TokenObtainPairView.as_view()),
+    
+    path("api/token/refresh/", TokenRefreshView.as_view()),
 
     path(
         "workers/<int:pk>/",
