@@ -587,3 +587,7 @@ def report_product(request):
 @api_view(["GET"])
 def test_api(request):
     return Response({"message": "Services working"})    
+
+@api_view(["GET"])
+def debug(request):
+    return Response({"status": "ok"})
