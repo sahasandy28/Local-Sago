@@ -14,7 +14,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # API routes (future apps)
-    path('api/', include('api.urls')),  # 👈 new app name (clean reset)
+    path('api/', include('services.urls')),  # 👈 new app name (clean reset)
 
     # JWT Authentication
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
