@@ -7,14 +7,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # =========================
 # SECURITY
 # =========================
-SECRET_KEY = 'django-insecure-lha92&j8z-replace-this-in-production'
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-fallback-key")
 
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    "local-sago-backend.onrender.com",
     ".onrender.com",
-    "localhost",
     "127.0.0.1",
+    "localhost",
 ]
 
 
@@ -61,6 +62,12 @@ MIDDLEWARE = [
 # CORS
 # =========================
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+    "accept",
+]
 
 
 # =========================
