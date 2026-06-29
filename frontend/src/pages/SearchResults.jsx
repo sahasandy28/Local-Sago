@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import "./SearchResults.css";
 
 function SearchResults() {
-  const API_BASE_URL = "http://127.0.0.1:8000/api";
+  const API_BASE_URL = "https://local-sago-backend.onrender.com/api";
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import "./WorkerRegister.css";
 
 function WorkerRegister() {
-  const API_BASE_URL = "http://127.0.0.1:8000/api";
+  const API_BASE_URL = "https://local-sago-backend.onrender.com/api";
 
   const [categories, setCategories] = useState([]);
   const [images, setImages] = useState([]);

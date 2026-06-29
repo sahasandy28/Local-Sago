@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import "./ProductDetail.css";
 
 function ProductDetail() {
-  const API_BASE_URL = "http://127.0.0.1:8000/api";
+  const API_BASE_URL = "https://local-sago-backend.onrender.com/api";
 
   const { id } = useParams();
   const navigate = useNavigate();

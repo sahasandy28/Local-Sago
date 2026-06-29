@@ -6,7 +6,7 @@ import "./Service.css";
 import PageLoader from "../components/PageLoader";
 
 function Service() {
-  const API_BASE_URL = "http://127.0.0.1:8000/api";
+  const API_BASE_URL = "https://local-sago-backend.onrender.com/api";
   const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();

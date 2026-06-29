@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/services/")
+      .get("https://local-sago-backend.onrender.com/api/services/")
       .then((res) => {
         setServices(res.data);
       })
@@ -23,7 +23,7 @@ function App() {
           <div className="card" key={service.id}>
             
             <img
-              src={`http://127.0.0.1:8000${service.image}`}
+              src={`https://local-sago-backend.onrender.com${service.image}`}
               alt={service.name}
             />
 
@@ -35,12 +35,12 @@ function App() {
               <p className="price">₹ {service.price}</p>
 
               <p className="location">
-                📍 {service.location}
+                 {service.location}
               </p>
 
               <a href={`tel:${service.phone}`}>
                 <button className="call-btn">
-                  📞 Call Now
+                   Call Now
                 </button>
               </a>
             </div>
